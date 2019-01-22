@@ -1,2 +1,5 @@
 *.npz
 *.pkl
+
+scripts/*.pyc
+scripts/models/*.pyc
