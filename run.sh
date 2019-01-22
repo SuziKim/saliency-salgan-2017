@@ -1,1 +1,1 @@
-THEANO_FLAGS='mode=FAST_RUN,device=cuda,floatX=float32,optimizer_including=cudnn' python 03-predict.py
+THEANO_FLAGS='mode=FAST_RUN,device=cuda,floatX=float32,optimizer_including=cudnn' python scripts/03-predict.py -i images/ -o saliency/

@@ -6,6 +6,7 @@ import glob
 from utils import *
 from constants import *
 from models.model_bce import ModelBCE
+import argparse
 
 
 def test(path_to_images, path_output_maps, model_to_test=None):
@@ -18,13 +19,24 @@ def test(path_to_images, path_output_maps, model_to_test=None):
         predict(model=model_to_test, image_stimuli=img, name=curr_file, path_output_maps=path_output_maps)
 
 
-def main():
+def main(input_dir, output_dir):
     # Create network
     model = ModelBCE(INPUT_SIZE[0], INPUT_SIZE[1], batch_size=8)
+    
+    print ""
+    print "Load weights..."
     # Here need to specify the epoch of model sanpshot
     load_weights(model.net['output'], path='gen_', epochtoload=90)
+
+    print "Start predicting..."
     # Here need to specify the path to images and output path
-    test(path_to_images='../images/', path_output_maps='../saliency/', model_to_test=model)
+    test(path_to_images=input_dir, path_output_maps=output_dir, model_to_test=model)
+
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', '--inputdir', help='Input directory', required=True)
+    parser.add_argument('-o', '--outputdir', help='Output directory', required=True)
+
+    args = parser.parse_args()
+    main(args.inputdir, args.outputdir)
