@@ -3,3 +3,5 @@
 
 scripts/*.pyc
 scripts/models/*.pyc
+
+**/*.jpg
