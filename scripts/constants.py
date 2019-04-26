@@ -1,5 +1,5 @@
 # Work space directory
-HOME_DIR = '/home/gclab/Desktop/suzi/MovieColorSchemer/code/saliency-salgan-2017/'
+HOME_DIR = '/home/suzi/Research/MovieColorSchemer/code/saliency-salgan-2017/'
 
 # Path to SALICON raw data
 # pathToImages = '/home/users/jpang/salicon_data/images'
@@ -17,7 +17,7 @@ HOME_DIR = '/home/gclab/Desktop/suzi/MovieColorSchemer/code/saliency-salgan-2017
 # TEST_DATA_DIR = '/home/users/jpang/scratch-local/salicon_data/256x192/testData.pickle'
 
 # Path to vgg16 pre-trained weights
-PATH_TO_VGG16_WEIGHTS = '/home/gclab/Desktop/suzi/MovieColorSchemer/code/saliency-salgan-2017/vgg16.pkl'
+PATH_TO_VGG16_WEIGHTS = '/home/suzi/Research/MovieColorSchemer/code/saliency-salgan-2017/vgg16.pkl'
 
 # Input image and saliency map size
 INPUT_SIZE = (256, 192)
